@@ -1,0 +1,5 @@
+vim
+iproute2
+iputils-ping
+cron
+curlftpfs
