@@ -1,0 +1,10 @@
+lxml
+pyquery
+redis
+requests
+pandas
+matplotlib
+sklearn
+pymysql
+pymongo
+tensorflow

@@ -8,5 +8,6 @@ mkdir -p /home/jovyan/work/go/bin/hello && mkdir -p /home/jovyan/work/go/pkg && 
 touch /home/jovyan/work/go/src/hello/hello.go && \
 cd /home/jovyan/ && git clone https://github.com/jonnyhtmso/home.git && \
 /bin/bash /home/jovyan/home/doc/init.sh && \
-pip install redis 
+pip install -r /home/jovyan/home/requirement.txt && \
+chown -R jovyan /home/jovyan/home 
 CMD ['jupyter', 'notebook', '--allow-root' ]
