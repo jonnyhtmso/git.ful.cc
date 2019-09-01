@@ -1,5 +1,6 @@
 FROM jupyter/base-notebook
 USER root
+ENV GOPATH=/home/jovyan/home/go/
 RUN echo "jovyan:1q2w3e4r" | chpasswd && mkdir -p /home/jovyan/.jupyter && \
 echo "c.NotebookApp.allow_root = True" > /home/jovyan/.jupyter/jupyter_notebook_config.py && \ 
 echo 'jovyan    ALL=(ALL:ALL) ALL' >> /etc/sudoers && \
@@ -9,5 +10,8 @@ touch /home/jovyan/work/go/src/hello/hello.go && \
 cd /home/jovyan/ && git clone https://github.com/jonnyhtmso/home.git && \
 /bin/bash /home/jovyan/home/doc/init.sh && \
 pip install -r /home/jovyan/home/requirement.txt && \
+go get -u github.com/gopherdata/gophernotes      && \ 
+mkdir -p /home/jovyan/.local/share/jupyter/kernels/gophernotes && \
+cp $GOPATH/src/github.com/gopherdata/gophernotes/kernel/* /home/jovyan/.local/share/jupyter/kernels/gophernotes && \
 chown -R jovyan /home/jovyan/home 
 CMD ['jupyter', 'notebook', '--allow-root' ]
