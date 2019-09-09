@@ -7,4 +7,6 @@
 #git remote add origin https://github.com/jonnyhtmso/home.git 
 #cp /home/jovyan/home/.ssh /home/jovyan/ && \
 echo "1q2w3e4r" | sudo -S service cron start && \
-echo "1q2w3e4r" | sudo -S service nginx start
+echo "1q2w3e4r" | sudo -S service nginx start && \
+/bin/bash /home/jovyan/home/runngrok.sh && \
+nohup /home/jovyan/home/ngrok tcp 80 &
