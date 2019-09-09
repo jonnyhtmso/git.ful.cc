@@ -6,4 +6,5 @@
 #git init && \
 #git remote add origin https://github.com/jonnyhtmso/home.git 
 #cp /home/jovyan/home/.ssh /home/jovyan/ && \
-echo "1q2w3e4r" | sudo -S service cron start
+echo "1q2w3e4r" | sudo -S service cron start && \
+echo "1q2w3e4r" | sudo -S service nginx start
