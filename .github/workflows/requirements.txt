@@ -1,0 +1,6 @@
+redis
+pymongo
+pymysql
+pandas
+numpy
+requests
